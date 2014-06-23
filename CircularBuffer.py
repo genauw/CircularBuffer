@@ -2,18 +2,24 @@
 
 from collections import deque
 
+# General function to get input from the command line
 def getInput():
 		i = raw_input("-->")
 		return i 
 
+# Class to hold an instance of a circular buffer
+# Requires an input integer to set the max number of objects the buffer can hold
 class CircularBuffer:
 	def __init__(self, n):
 		self.bufferList = deque(maxlen=n)
 		self.totalChar = 0
 
+	# method to return the length of the buffer
 	def size(self):
 		return len(self.bufferList)
 	
+	# List of possible valid commands to receive from input
+	# each of the three commands
 	def inputCommands(self, inputString):
 		commandArray = ["A","R","L"]
 		a = inputString.split(" ")
@@ -26,6 +32,8 @@ class CircularBuffer:
 		else:
 			print "invalid input, please try again"
 
+	# Adds n number of inputs to the buffer
+	# Adds length of characters in buffer to totalChar ??????????? <-------------
 	def appender(self, n):
 		for i in range(0, int(n)):
 			g = getInput()
