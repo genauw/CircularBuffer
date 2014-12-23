@@ -4,7 +4,7 @@ from collections import deque
 
 # General function to get input from the command line
 def getInput():
-		i = raw_input("-->") #find out what raw_input is for python3 !!!!!!!!!!!
+		i = input("-->") #raw_input() for python2 input() for python3
 		return i
 
 # Class to hold an instance of a circular buffer
